@@ -1,0 +1,469 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/varun-v-iyer1/main/ap-eomC6R5qru3sSMJbZMNneZ
+✓ Created objects.
+├── 🔨 Created mount /Users/varuniyer/control/deploy/app.py
+├── 🔨 Created mount PythonPackage:src
+├── 🔨 Created mount PythonPackage:src, PythonPackage:scripts
+├── 🔨 Created function _download_models.
+├── 🔨 Created function _download_models.
+├── 🔨 Created function freeze_apps.
+├── 🔨 Created function freeze_code_contests.
+├── 🔨 Created function run_feasibility.
+├── 🔨 Created function extract_checkpoint_activations.
+├── 🔨 Created function probe_checkpoints.
+├── 🔨 Created function run_steering.
+├── 🔨 Created function validate_probe.
+├── 🔨 Created function validate_feasibility_probe.
+├── 🔨 Created function build_cc_training_problem_ids.
+├── 🔨 Created function classify_strategies_cc.
+├── 🔨 Created function compute_fresh_probe_directions_cc.
+├── 🔨 Created function validate_fresh_probe_cc.
+├── 🔨 Created function validate_feasibility_probe_cc.
+├── 🔨 Created function run_diagnostic.
+└── 🔨 Created function run_ppo_training.
+[steer] 30 problems for steering (codecontests)
+[steer] loaded probe direction from /results/probes_cc/frozen_probe_direction.npy
+[steer] using probe layer 11
+[steer] checkpoints: base + rounds [0, 1, 2, 3, 4]
+[steer] 30 problems for steering (codecontests)
+[extract] loading base model Qwen/Qwen2.5-Coder-7B-Instruct
+[steer] loaded probe direction from /results/probes_cc/frozen_probe_direction.npy
+[steer] using probe layer 11
+[steer] checkpoints: base + rounds [0, 1, 2, 3, 4]
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+[extract] loading base model Qwen/Qwen2.5-Coder-7B-Instruct
+[1AFetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+[steer] 30 problems for steering (codecontests)
+[steer] loaded probe direction from /results/probes_cc/frozen_probe_direction.npy
+[steer] using probe layer 11
+[steer] checkpoints: base + rounds [0, 1, 2, 3, 4]
+[steer] 30 problems for steering (codecontests)
+[steer] loaded probe direction from /results/probes_cc/frozen_probe_direction.npy
+[steer] using probe layer 11
+[steer] checkpoints: base + rounds [0, 1, 2, 3, 4]
+[extract] loading base model Qwen/Qwen2.5-Coder-7B-Instruct
+[1AFetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+[extract] loading base model Qwen/Qwen2.5-Coder-7B-Instruct
+[1AFetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+[1AFetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+[1AFetching 4 files:  25%|██▌       | 1/4 [00:34<01:44, 34.93s/it]
+[1AFetching 4 files: 100%|██████████| 4/4 [00:34<00:00,  8.73s/it]
+
+[1ALoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+[1ALoading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.01it/s]
+[1ALoading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.01it/s]
+[1ALoading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.04it/s]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.48it/s]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.27it/s]
+[steer] skipping alpha sweep, using fixed_alpha=2.0
+[steer] skipping base (single_checkpoint=round_2)
+[steer] skipping round_0 (single_checkpoint=round_2)
+[steer] skipping round_1 (single_checkpoint=round_2)
+[extract] loading and merging adapter from /results/checkpoints/ppo_cc/round_2
+
+[1ALoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+[1ALoading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.16s/it]
+[1ALoading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.21s/it]
+[1AFetching 4 files:  25%|██▌       | 1/4 [00:33<01:39, 33.15s/it]Fetching 4 files: 100%|██████████| 4/4 [00:33<00:00,  8.29s/it]
+
+[1ALoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+[1ALoading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.19s/it]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.04it/s]
+
+[1ALoading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.07it/s]
+[1ALoading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.07it/s]
+[1ALoading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.11it/s]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.54it/s]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.34it/s]
+[steer] skipping alpha sweep, using fixed_alpha=7.0
+[steer] skipping base (single_checkpoint=round_2)
+[steer] skipping round_0 (single_checkpoint=round_2)
+[steer] skipping round_1 (single_checkpoint=round_2)
+[extract] loading and merging adapter from /results/checkpoints/ppo_cc/round_2
+
+[1ALoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+[1ALoading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.18s/it]
+[1ALoading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.18s/it]
+[1ALoading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.15s/it]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.22it/s]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.06it/s]
+  [gen-baseline] 1/30 (n=32)
+  [gen-baseline] 2/30 (n=32)
+  [gen-baseline] 1/30 (n=32)
+  [gen-baseline] 2/30 (n=32)
+  [gen-baseline] 3/30 (n=32)
+
+[1AFetching 4 files:  25%|██▌       | 1/4 [01:02<03:06, 62.32s/it]
+[1AFetching 4 files: 100%|██████████| 4/4 [01:02<00:00, 15.58s/it]
+
+[1ALoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+  [gen-baseline] 3/30 (n=32)
+[1ALoading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.39s/it]
+  [gen-baseline] 4/30 (n=32)
+[1ALoading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.54s/it]
+[1AFetching 4 files:  25%|██▌       | 1/4 [01:14<03:44, 74.82s/it]Fetching 4 files: 100%|██████████| 4/4 [01:14<00:00, 18.71s/it]
+
+[1ALoading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.46s/it]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.01it/s]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.17s/it]
+[steer] skipping alpha sweep, using fixed_alpha=10.0
+
+[steer] skipping base (single_checkpoint=round_2)
+[steer] skipping round_0 (single_checkpoint=round_2)
+[steer] skipping round_1 (single_checkpoint=round_2)
+[extract] loading and merging adapter from /results/checkpoints/ppo_cc/round_2
+[1ALoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+[1ALoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+[1ALoading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.72s/it]
+[1ALoading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.71s/it]
+[1ALoading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.86s/it]
+[1ALoading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.59s/it]
+[1ALoading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.76s/it]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.11s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.31s/it]
+[steer] skipping alpha sweep, using fixed_alpha=5.0
+[steer] skipping base (single_checkpoint=round_2)
+[steer] skipping round_0 (single_checkpoint=round_2)
+[steer] skipping round_1 (single_checkpoint=round_2)
+
+[extract] loading and merging adapter from /results/checkpoints/ppo_cc/round_2
+[1ALoading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.63s/it]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.14s/it]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.36s/it]
+
+  [gen-baseline] 5/30 (n=32)
+  [gen-baseline] 4/30 (n=32)
+[1ALoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+[1ALoading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.80s/it]
+[1ALoading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.81s/it]
+[1ALoading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.72s/it]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.18s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.39s/it]
+  [gen-baseline] 6/30 (n=32)
+  [gen-baseline] 5/30 (n=32)
+  [gen-baseline] 1/30 (n=32)
+  [gen-baseline] 2/30 (n=32)
+  [gen-baseline] 7/30 (n=32)
+  [gen-baseline] 6/30 (n=32)
+  [gen-baseline] 1/30 (n=32)
+  [gen-baseline] 7/30 (n=32)
+  [gen-baseline] 2/30 (n=32)
+  [gen-baseline] 3/30 (n=32)
+  [gen-baseline] 8/30 (n=32)
+  [gen-baseline] 8/30 (n=32)
+  [gen-baseline] 9/30 (n=32)
+  [gen-baseline] 9/30 (n=32)
+  [gen-baseline] 3/30 (n=32)
+  [gen-baseline] 4/30 (n=32)
+  [gen-baseline] 10/30 (n=32)
+  [gen-baseline] 4/30 (n=32)
+  [gen-baseline] 5/30 (n=32)
+  [gen-baseline] 10/30 (n=32)
+  [gen-baseline] 5/30 (n=32)
+  [gen-baseline] 11/30 (n=32)
+  [gen-baseline] 6/30 (n=32)
+  [gen-baseline] 11/30 (n=32)
+  [gen-baseline] 12/30 (n=32)
+  [gen-baseline] 7/30 (n=32)
+  [gen-baseline] 6/30 (n=32)
+  [gen-baseline] 12/30 (n=32)
+  [gen-baseline] 7/30 (n=32)
+  [gen-baseline] 13/30 (n=32)
+  [gen-baseline] 13/30 (n=32)
+  [gen-baseline] 14/30 (n=32)
+  [gen-baseline] 8/30 (n=32)
+  [gen-baseline] 14/30 (n=32)
+  [gen-baseline] 9/30 (n=32)
+  [gen-baseline] 8/30 (n=32)
+  [gen-baseline] 9/30 (n=32)
+  [gen-baseline] 10/30 (n=32)
+  [gen-baseline] 15/30 (n=32)
+  [gen-baseline] 15/30 (n=32)
+  [gen-baseline] 16/30 (n=32)  [gen-baseline] 16/30 (n=32)
+
+  [gen-baseline] 11/30 (n=32)
+  [gen-baseline] 17/30 (n=32)
+  [gen-baseline] 10/30 (n=32)
+  [gen-baseline] 17/30 (n=32)
+  [gen-baseline] 12/30 (n=32)
+  [gen-baseline] 18/30 (n=32)
+  [gen-baseline] 18/30 (n=32)
+  [gen-baseline] 19/30 (n=32)
+  [gen-baseline] 11/30 (n=32)
+  [gen-baseline] 19/30 (n=32)
+  [gen-baseline] 13/30 (n=32)
+  [gen-baseline] 12/30 (n=32)
+  [gen-baseline] 14/30 (n=32)
+  [gen-baseline] 20/30 (n=32)
+  [gen-baseline] 20/30 (n=32)
+  [gen-baseline] 13/30 (n=32)
+  [gen-baseline] 21/30 (n=32)
+  [gen-baseline] 21/30 (n=32)
+  [gen-baseline] 15/30 (n=32)
+  [gen-baseline] 16/30 (n=32)
+  [gen-baseline] 14/30 (n=32)
+  [gen-baseline] 22/30 (n=32)
+  [gen-baseline] 22/30 (n=32)
+  [gen-baseline] 17/30 (n=32)
+  [gen-baseline] 23/30 (n=32)
+  [gen-baseline] 23/30 (n=32)
+  [gen-baseline] 18/30 (n=32)
+  [gen-baseline] 15/30 (n=32)
+  [gen-baseline] 24/30 (n=32)
+  [gen-baseline] 24/30 (n=32)  [gen-baseline] 16/30 (n=32)
+
+  [gen-baseline] 19/30 (n=32)
+  [gen-baseline] 17/30 (n=32)
+  [gen-baseline] 25/30 (n=32)
+  [gen-baseline] 20/30 (n=32)
+  [gen-baseline] 25/30 (n=32)
+  [gen-baseline] 18/30 (n=32)
+  [gen-baseline] 21/30 (n=32)
+  [gen-baseline] 19/30 (n=32)
+  [gen-baseline] 26/30 (n=32)
+  [gen-baseline] 26/30 (n=32)
+  [gen-baseline] 27/30 (n=32)
+  [gen-baseline] 22/30 (n=32)
+  [gen-baseline] 20/30 (n=32)
+  [gen-baseline] 27/30 (n=32)
+  [gen-baseline] 21/30 (n=32)
+  [gen-baseline] 28/30 (n=32)
+  [gen-baseline] 22/30 (n=32)
+  [gen-baseline] 28/30 (n=32)
+  [gen-baseline] 29/30 (n=32)
+  [gen-baseline] 29/30 (n=32)
+  [gen-baseline] 30/30 (n=32)
+  [gen-baseline] 30/30 (n=32)
+  [gen-baseline] 23/30 (n=32)
+  [gen-steered] 1/30 (alpha=7.0, n=32)
+  [gen-steered] 1/30 (alpha=2.0, n=32)
+  [gen-steered] 2/30 (alpha=7.0, n=32)
+  [gen-steered] 2/30 (alpha=2.0, n=32)
+  [gen-baseline] 24/30 (n=32)
+  [gen-steered] 3/30 (alpha=7.0, n=32)
+  [gen-steered] 3/30 (alpha=2.0, n=32)
+  [gen-baseline] 25/30 (n=32)
+  [gen-baseline] 23/30 (n=32)
+  [gen-steered] 4/30 (alpha=7.0, n=32)
+  [gen-steered] 4/30 (alpha=2.0, n=32)
+  [gen-baseline] 24/30 (n=32)
+  [gen-baseline] 26/30 (n=32)
+  [gen-steered] 5/30 (alpha=7.0, n=32)
+  [gen-steered] 5/30 (alpha=2.0, n=32)
+  [gen-baseline] 27/30 (n=32)
+  [gen-steered] 6/30 (alpha=2.0, n=32)
+  [gen-baseline] 25/30 (n=32)
+  [gen-steered] 6/30 (alpha=7.0, n=32)
+  [gen-steered] 7/30 (alpha=2.0, n=32)
+  [gen-steered] 7/30 (alpha=7.0, n=32)
+  [gen-baseline] 26/30 (n=32)
+  [gen-baseline] 28/30 (n=32)
+  [gen-steered] 8/30 (alpha=7.0, n=32)
+  [gen-steered] 8/30 (alpha=2.0, n=32)
+  [gen-steered] 9/30 (alpha=7.0, n=32)
+  [gen-steered] 9/30 (alpha=2.0, n=32)
+  [gen-baseline] 27/30 (n=32)
+  [gen-baseline] 29/30 (n=32)
+  [gen-baseline] 30/30 (n=32)
+  [gen-steered] 10/30 (alpha=7.0, n=32)
+  [gen-steered] 10/30 (alpha=2.0, n=32)
+  [gen-steered] 1/30 (alpha=10.0, n=32)
+  [gen-steered] 2/30 (alpha=10.0, n=32)
+  [gen-steered] 11/30 (alpha=7.0, n=32)
+  [gen-steered] 3/30 (alpha=10.0, n=32)
+  [gen-steered] 11/30 (alpha=2.0, n=32)
+  [gen-steered] 12/30 (alpha=7.0, n=32)
+  [gen-baseline] 28/30 (n=32)
+  [gen-steered] 12/30 (alpha=2.0, n=32)
+  [gen-steered] 4/30 (alpha=10.0, n=32)
+  [gen-baseline] 29/30 (n=32)
+  [gen-steered] 13/30 (alpha=7.0, n=32)
+  [gen-steered] 13/30 (alpha=2.0, n=32)
+  [gen-steered] 14/30 (alpha=7.0, n=32)
+  [gen-steered] 5/30 (alpha=10.0, n=32)
+  [gen-baseline] 30/30 (n=32)
+  [gen-steered] 14/30 (alpha=2.0, n=32)
+  [gen-steered] 6/30 (alpha=10.0, n=32)
+  [gen-steered] 1/30 (alpha=5.0, n=32)
+  [gen-steered] 15/30 (alpha=7.0, n=32)
+  [gen-steered] 2/30 (alpha=5.0, n=32)
+  [gen-steered] 16/30 (alpha=7.0, n=32)
+  [gen-steered] 7/30 (alpha=10.0, n=32)
+  [gen-steered] 15/30 (alpha=2.0, n=32)
+  [gen-steered] 17/30 (alpha=7.0, n=32)
+  [gen-steered] 16/30 (alpha=2.0, n=32)
+  [gen-steered] 3/30 (alpha=5.0, n=32)
+  [gen-steered] 18/30 (alpha=7.0, n=32)
+  [gen-steered] 8/30 (alpha=10.0, n=32)
+  [gen-steered] 17/30 (alpha=2.0, n=32)
+  [gen-steered] 19/30 (alpha=7.0, n=32)
+  [gen-steered] 9/30 (alpha=10.0, n=32)
+  [gen-steered] 18/30 (alpha=2.0, n=32)
+  [gen-steered] 19/30 (alpha=2.0, n=32)
+  [gen-steered] 4/30 (alpha=5.0, n=32)
+  [gen-steered] 20/30 (alpha=7.0, n=32)
+  [gen-steered] 20/30 (alpha=2.0, n=32)
+  [gen-steered] 10/30 (alpha=10.0, n=32)
+  [gen-steered] 5/30 (alpha=5.0, n=32)
+  [gen-steered] 21/30 (alpha=7.0, n=32)
+  [gen-steered] 21/30 (alpha=2.0, n=32)
+  [gen-steered] 11/30 (alpha=10.0, n=32)
+  [gen-steered] 6/30 (alpha=5.0, n=32)
+  [gen-steered] 22/30 (alpha=7.0, n=32)
+  [gen-steered] 12/30 (alpha=10.0, n=32)
+  [gen-steered] 22/30 (alpha=2.0, n=32)
+  [gen-steered] 7/30 (alpha=5.0, n=32)
+  [gen-steered] 23/30 (alpha=7.0, n=32)
+  [gen-steered] 13/30 (alpha=10.0, n=32)
+  [gen-steered] 23/30 (alpha=2.0, n=32)
+  [gen-steered] 24/30 (alpha=7.0, n=32)
+  [gen-steered] 14/30 (alpha=10.0, n=32)
+  [gen-steered] 24/30 (alpha=2.0, n=32)
+  [gen-steered] 8/30 (alpha=5.0, n=32)
+  [gen-steered] 15/30 (alpha=10.0, n=32)
+  [gen-steered] 25/30 (alpha=7.0, n=32)
+  [gen-steered] 9/30 (alpha=5.0, n=32)
+  [gen-steered] 16/30 (alpha=10.0, n=32)
+  [gen-steered] 25/30 (alpha=2.0, n=32)
+  [gen-steered] 17/30 (alpha=10.0, n=32)
+  [gen-steered] 26/30 (alpha=7.0, n=32)
+  [gen-steered] 18/30 (alpha=10.0, n=32)
+  [gen-steered] 26/30 (alpha=2.0, n=32)
+  [gen-steered] 19/30 (alpha=10.0, n=32)
+  [gen-steered] 10/30 (alpha=5.0, n=32)
+  [gen-steered] 27/30 (alpha=7.0, n=32)
+  [gen-steered] 27/30 (alpha=2.0, n=32)
+  [gen-steered] 20/30 (alpha=10.0, n=32)
+  [gen-steered] 11/30 (alpha=5.0, n=32)
+  [gen-steered] 21/30 (alpha=10.0, n=32)
+  [gen-steered] 28/30 (alpha=7.0, n=32)
+  [gen-steered] 12/30 (alpha=5.0, n=32)
+  [gen-steered] 28/30 (alpha=2.0, n=32)
+  [gen-steered] 29/30 (alpha=7.0, n=32)
+  [gen-steered] 22/30 (alpha=10.0, n=32)
+  [gen-steered] 29/30 (alpha=2.0, n=32)
+  [gen-steered] 13/30 (alpha=5.0, n=32)
+  [gen-steered] 30/30 (alpha=7.0, n=32)
+[steer-measure] evaluating 960 unsteered + 960 steered...
+  [gen-steered] 30/30 (alpha=2.0, n=32)
+[steer-measure] evaluating 960 unsteered + 960 steered...
+  [gen-steered] 23/30 (alpha=10.0, n=32)
+  [gen-steered] 14/30 (alpha=5.0, n=32)
+  [gen-steered] 24/30 (alpha=10.0, n=32)
+  [gen-steered] 15/30 (alpha=5.0, n=32)
+  [gen-steered] 16/30 (alpha=5.0, n=32)
+  [gen-steered] 25/30 (alpha=10.0, n=32)
+  [gen-steered] 26/30 (alpha=10.0, n=32)
+  [gen-steered] 17/30 (alpha=5.0, n=32)
+  [gen-steered] 27/30 (alpha=10.0, n=32)
+  [gen-steered] 18/30 (alpha=5.0, n=32)
+  [gen-steered] 19/30 (alpha=5.0, n=32)
+  [gen-steered] 28/30 (alpha=10.0, n=32)
+  [gen-steered] 20/30 (alpha=5.0, n=32)
+  [gen-steered] 29/30 (alpha=10.0, n=32)
+  [gen-steered] 21/30 (alpha=5.0, n=32)
+  [gen-steered] 30/30 (alpha=10.0, n=32)
+[steer-measure] evaluating 960 unsteered + 960 steered...
+  [gen-steered] 22/30 (alpha=5.0, n=32)
+  [gen-steered] 23/30 (alpha=5.0, n=32)
+  [gen-steered] 24/30 (alpha=5.0, n=32)
+  [gen-steered] 25/30 (alpha=5.0, n=32)
+  [gen-steered] 26/30 (alpha=5.0, n=32)
+  [gen-steered] 27/30 (alpha=5.0, n=32)
+  [gen-steered] 28/30 (alpha=5.0, n=32)
+  [gen-steered] 29/30 (alpha=5.0, n=32)
+  [gen-steered] 30/30 (alpha=5.0, n=32)
+[steer-measure] evaluating 960 unsteered + 960 steered...
+[steer] round_2: unsteered=0.485, steered=0.367
+[steer] skipping round_3 (single_checkpoint=round_2)
+[steer] skipping round_4 (single_checkpoint=round_2)
+[steer] round_2: unsteered=0.479, steered=0.394
+[steer] skipping round_3 (single_checkpoint=round_2)
+[steer] skipping round_4 (single_checkpoint=round_2)
+[steer] round_2: unsteered=0.477, steered=0.446
+[steer] skipping round_3 (single_checkpoint=round_2)
+[steer] skipping round_4 (single_checkpoint=round_2)
+{
+  "best_alpha": 2.0,
+  "sweep": {
+    "skipped": true,
+    "alpha_used": 2.0
+  },
+  "checkpoints": [
+    {
+      "shortcut_rate_unsteered": 0.47708333333333336,
+      "shortcut_rate_steered": 0.44583333333333336,
+      "n_unsteered_shortcuts": 458,
+      "n_steered_shortcuts": 428,
+      "n_total": 960,
+      "n_problems": 30,
+      "alpha": 2.0,
+      "step": "round_2"
+    }
+  ]
+}
+[steer] round_2: unsteered=0.470, steered=0.410
+[steer] skipping round_3 (single_checkpoint=round_2)
+[steer] skipping round_4 (single_checkpoint=round_2)
+{
+  "best_alpha": 5.0,
+  "sweep": {
+    "skipped": true,
+    "alpha_used": 5.0
+  },
+  "checkpoints": [
+    {
+      "shortcut_rate_unsteered": 0.46979166666666666,
+      "shortcut_rate_steered": 0.41041666666666665,
+      "n_unsteered_shortcuts": 451,
+      "n_steered_shortcuts": 394,
+      "n_total": 960,
+      "n_problems": 30,
+      "alpha": 5.0,
+      "step": "round_2"
+    }
+  ]
+}
+{
+  "best_alpha": 7.0,
+  "sweep": {
+    "skipped": true,
+    "alpha_used": 7.0
+  },
+  "checkpoints": [
+    {
+      "shortcut_rate_unsteered": 0.4791666666666667,
+      "shortcut_rate_steered": 0.39375,
+      "n_unsteered_shortcuts": 460,
+      "n_steered_shortcuts": 378,
+      "n_total": 960,
+      "n_problems": 30,
+      "alpha": 7.0,
+      "step": "round_2"
+    }
+  ]
+}
+{
+  "best_alpha": 10.0,
+  "sweep": {
+    "skipped": true,
+    "alpha_used": 10.0
+  },
+  "checkpoints": [
+    {
+      "shortcut_rate_unsteered": 0.48541666666666666,
+      "shortcut_rate_steered": 0.36666666666666664,
+      "n_unsteered_shortcuts": 466,
+      "n_steered_shortcuts": 352,
+      "n_total": 960,
+      "n_problems": 30,
+      "alpha": 10.0,
+      "step": "round_2"
+    }
+  ]
+}
+✓ App completed. View run at 
+https://modal.com/apps/varun-v-iyer1/main/ap-eomC6R5qru3sSMJbZMNneZ

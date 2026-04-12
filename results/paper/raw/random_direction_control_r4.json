@@ -1,0 +1,38 @@
+{
+  "checkpoint": "round_4",
+  "alpha": 10.0,
+  "frozen_norm": 1.5063095652204697,
+  "probe_layer": 11,
+  "per_seed": {
+    "41": {
+      "shortcut_rate_unsteered": 0.46770833333333334,
+      "shortcut_rate_steered": 0.440625,
+      "n_unsteered_shortcuts": 449,
+      "n_steered_shortcuts": 423,
+      "n_total": 960,
+      "n_problems": 30,
+      "alpha": 10.0,
+      "seed": 41
+    },
+    "42": {
+      "shortcut_rate_unsteered": 0.440625,
+      "shortcut_rate_steered": 0.5052083333333334,
+      "n_unsteered_shortcuts": 423,
+      "n_steered_shortcuts": 485,
+      "n_total": 960,
+      "n_problems": 30,
+      "alpha": 10.0,
+      "seed": 42
+    },
+    "43": {
+      "shortcut_rate_unsteered": 0.4427083333333333,
+      "shortcut_rate_steered": 0.38958333333333334,
+      "n_unsteered_shortcuts": 425,
+      "n_steered_shortcuts": 374,
+      "n_total": 960,
+      "n_problems": 30,
+      "alpha": 10.0,
+      "seed": 43
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "checkpoint": "round_4",
+  "probe_layer": 11,
+  "per_direction": {
+    "noscaler_lr_step_0": {
+      "shortcut_rate_unsteered": 0.459375,
+      "shortcut_rate_ablated": 0.446875,
+      "n_unsteered_shortcuts": 441,
+      "n_ablated_shortcuts": 429,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 6.931712627410889,
+      "checkpoint": "round_4",
+      "direction_key": "noscaler_lr_step_0"
+    },
+    "noscaler_lr_r4": {
+      "shortcut_rate_unsteered": 0.4510416666666667,
+      "shortcut_rate_ablated": 0.45729166666666665,
+      "n_unsteered_shortcuts": 433,
+      "n_ablated_shortcuts": 439,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 7.508552074432373,
+      "checkpoint": "round_4",
+      "direction_key": "noscaler_lr_r4"
+    }
+  }
+}

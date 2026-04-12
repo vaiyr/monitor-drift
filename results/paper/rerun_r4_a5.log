@@ -1,0 +1,137 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/varun-v-iyer1/main/ap-Slr8gI69bhZefJv1jF2xBD
+✓ Created objects.
+├── 🔨 Created mount /Users/varuniyer/control/deploy/app.py
+├── 🔨 Created mount PythonPackage:src
+├── 🔨 Created mount PythonPackage:src, PythonPackage:scripts
+├── 🔨 Created function _download_models.
+├── 🔨 Created function _download_models.
+├── 🔨 Created function run_ppo_training.
+├── 🔨 Created function freeze_apps.
+├── 🔨 Created function freeze_code_contests.
+├── 🔨 Created function run_feasibility.
+├── 🔨 Created function extract_checkpoint_activations.
+├── 🔨 Created function probe_checkpoints.
+├── 🔨 Created function run_steering.
+├── 🔨 Created function validate_probe.
+├── 🔨 Created function validate_feasibility_probe.
+├── 🔨 Created function build_cc_training_problem_ids.
+├── 🔨 Created function classify_strategies_cc.
+├── 🔨 Created function compute_fresh_probe_directions_cc.
+├── 🔨 Created function validate_fresh_probe_cc.
+├── 🔨 Created function validate_feasibility_probe_cc.
+└── 🔨 Created function run_diagnostic.
+[steer] 30 problems for steering (codecontests)
+[steer] loaded probe direction from /results/probes_cc/frozen_probe_direction.npy
+[steer] using probe layer 11
+[steer] checkpoints: base + rounds [0, 1, 2, 3, 4]
+[extract] loading base model Qwen/Qwen2.5-Coder-7B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+[1AFetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+[1AFetching 4 files:  25%|██▌       | 1/4 [01:14<03:42, 74.22s/it]Fetching 4 files: 100%|██████████| 4/4 [01:14<00:00, 18.56s/it]
+
+[1ALoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+[1ALoading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.54s/it]
+[1ALoading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.56s/it]
+[1ALoading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.48s/it]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.03s/it]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.21s/it]
+[steer] skipping alpha sweep, using fixed_alpha=5.0
+[steer] skipping base (single_checkpoint=round_4)
+[steer] skipping round_0 (single_checkpoint=round_4)
+[steer] skipping round_1 (single_checkpoint=round_4)
+[steer] skipping round_2 (single_checkpoint=round_4)
+[steer] skipping round_3 (single_checkpoint=round_4)
+[extract] loading and merging adapter from /results/checkpoints/ppo_cc/round_4
+
+[1ALoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+[1ALoading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.83s/it]
+[1ALoading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.85s/it]
+[1ALoading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.73s/it]
+[1ALoading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.20s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.42s/it]
+  [gen-baseline] 1/30 (n=32)
+  [gen-baseline] 2/30 (n=32)
+  [gen-baseline] 3/30 (n=32)
+  [gen-baseline] 4/30 (n=32)
+  [gen-baseline] 5/30 (n=32)
+  [gen-baseline] 6/30 (n=32)
+  [gen-baseline] 7/30 (n=32)
+  [gen-baseline] 8/30 (n=32)
+  [gen-baseline] 9/30 (n=32)
+  [gen-baseline] 10/30 (n=32)
+  [gen-baseline] 11/30 (n=32)
+  [gen-baseline] 12/30 (n=32)
+  [gen-baseline] 13/30 (n=32)
+  [gen-baseline] 14/30 (n=32)
+  [gen-baseline] 15/30 (n=32)
+  [gen-baseline] 16/30 (n=32)
+  [gen-baseline] 17/30 (n=32)
+  [gen-baseline] 18/30 (n=32)
+  [gen-baseline] 19/30 (n=32)
+  [gen-baseline] 20/30 (n=32)
+  [gen-baseline] 21/30 (n=32)
+  [gen-baseline] 22/30 (n=32)
+  [gen-baseline] 23/30 (n=32)
+  [gen-baseline] 24/30 (n=32)
+  [gen-baseline] 25/30 (n=32)
+  [gen-baseline] 26/30 (n=32)
+  [gen-baseline] 27/30 (n=32)
+  [gen-baseline] 28/30 (n=32)
+  [gen-baseline] 29/30 (n=32)
+  [gen-baseline] 30/30 (n=32)
+  [gen-steered] 1/30 (alpha=5.0, n=32)
+  [gen-steered] 2/30 (alpha=5.0, n=32)
+  [gen-steered] 3/30 (alpha=5.0, n=32)
+  [gen-steered] 4/30 (alpha=5.0, n=32)
+  [gen-steered] 5/30 (alpha=5.0, n=32)
+  [gen-steered] 6/30 (alpha=5.0, n=32)
+  [gen-steered] 7/30 (alpha=5.0, n=32)
+  [gen-steered] 8/30 (alpha=5.0, n=32)
+  [gen-steered] 9/30 (alpha=5.0, n=32)
+  [gen-steered] 10/30 (alpha=5.0, n=32)
+  [gen-steered] 11/30 (alpha=5.0, n=32)
+  [gen-steered] 12/30 (alpha=5.0, n=32)
+  [gen-steered] 13/30 (alpha=5.0, n=32)
+  [gen-steered] 14/30 (alpha=5.0, n=32)
+  [gen-steered] 15/30 (alpha=5.0, n=32)
+  [gen-steered] 16/30 (alpha=5.0, n=32)
+  [gen-steered] 17/30 (alpha=5.0, n=32)
+  [gen-steered] 18/30 (alpha=5.0, n=32)
+  [gen-steered] 19/30 (alpha=5.0, n=32)
+  [gen-steered] 20/30 (alpha=5.0, n=32)
+  [gen-steered] 21/30 (alpha=5.0, n=32)
+  [gen-steered] 22/30 (alpha=5.0, n=32)
+  [gen-steered] 23/30 (alpha=5.0, n=32)
+  [gen-steered] 24/30 (alpha=5.0, n=32)
+  [gen-steered] 25/30 (alpha=5.0, n=32)
+  [gen-steered] 26/30 (alpha=5.0, n=32)
+  [gen-steered] 27/30 (alpha=5.0, n=32)
+  [gen-steered] 28/30 (alpha=5.0, n=32)
+  [gen-steered] 29/30 (alpha=5.0, n=32)
+  [gen-steered] 30/30 (alpha=5.0, n=32)
+[steer-measure] evaluating 960 unsteered + 960 steered...
+[steer] round_4: unsteered=0.469, steered=0.423
+{
+  "best_alpha": 5.0,
+  "sweep": {
+    "skipped": true,
+    "alpha_used": 5.0
+  },
+  "checkpoints": [
+    {
+      "shortcut_rate_unsteered": 0.46875,
+      "shortcut_rate_steered": 0.42291666666666666,
+      "n_unsteered_shortcuts": 450,
+      "n_steered_shortcuts": 406,
+      "n_total": 960,
+      "n_problems": 30,
+      "alpha": 5.0,
+      "step": "round_4"
+    }
+  ]
+}
+Runner terminated.
+✓ App completed. View run at 
+https://modal.com/apps/varun-v-iyer1/main/ap-Slr8gI69bhZefJv1jF2xBD

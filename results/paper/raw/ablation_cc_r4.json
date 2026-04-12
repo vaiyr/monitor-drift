@@ -1,0 +1,72 @@
+{
+  "checkpoint": "round_4",
+  "probe_layer": 11,
+  "per_direction": {
+    "writeup_frozen": {
+      "shortcut_rate_unsteered": 0.4510416666666667,
+      "shortcut_rate_ablated": 0.446875,
+      "n_unsteered_shortcuts": 433,
+      "n_ablated_shortcuts": 429,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 1.5063095092773438,
+      "checkpoint": "round_4",
+      "direction_key": "writeup_frozen"
+    },
+    "det_lr_step_0": {
+      "shortcut_rate_unsteered": 0.43125,
+      "shortcut_rate_ablated": 0.44166666666666665,
+      "n_unsteered_shortcuts": 414,
+      "n_ablated_shortcuts": 424,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 16.193384170532227,
+      "checkpoint": "round_4",
+      "direction_key": "det_lr_step_0"
+    },
+    "dom_step_0": {
+      "shortcut_rate_unsteered": 0.4354166666666667,
+      "shortcut_rate_ablated": 0.4041666666666667,
+      "n_unsteered_shortcuts": 418,
+      "n_ablated_shortcuts": 388,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 3.884840965270996,
+      "checkpoint": "round_4",
+      "direction_key": "dom_step_0"
+    },
+    "writeup_fresh_r4": {
+      "shortcut_rate_unsteered": 0.44375,
+      "shortcut_rate_ablated": 0.44895833333333335,
+      "n_unsteered_shortcuts": 426,
+      "n_ablated_shortcuts": 431,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 28.891040802001953,
+      "checkpoint": "round_4",
+      "direction_key": "writeup_fresh_r4"
+    },
+    "det_lr_r4": {
+      "shortcut_rate_unsteered": 0.4583333333333333,
+      "shortcut_rate_ablated": 0.43645833333333334,
+      "n_unsteered_shortcuts": 440,
+      "n_ablated_shortcuts": 419,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 16.845497131347656,
+      "checkpoint": "round_4",
+      "direction_key": "det_lr_r4"
+    },
+    "dom_r4": {
+      "shortcut_rate_unsteered": 0.43645833333333334,
+      "shortcut_rate_ablated": 0.27708333333333335,
+      "n_unsteered_shortcuts": 419,
+      "n_ablated_shortcuts": 266,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 3.364394426345825,
+      "checkpoint": "round_4",
+      "direction_key": "dom_r4"
+    }
+  }
+}

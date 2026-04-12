@@ -1,0 +1,19 @@
+{
+  "best_alpha": 5.0,
+  "sweep": {
+    "skipped": true,
+    "alpha_used": 5.0
+  },
+  "checkpoints": [
+    {
+      "shortcut_rate_unsteered": 0.4375,
+      "shortcut_rate_steered": 0.4239583333333333,
+      "n_unsteered_shortcuts": 420,
+      "n_steered_shortcuts": 407,
+      "n_total": 960,
+      "n_problems": 30,
+      "alpha": 5.0,
+      "step": "base"
+    }
+  ]
+}

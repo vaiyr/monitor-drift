@@ -1,0 +1,837 @@
+{
+  "meta": {
+    "n_boot": 10000,
+    "n_perm": 10000,
+    "rng_seed": 20260410,
+    "caveat": "CIs use binomial_approximation because per-problem counts are not stored in the steering JSONs. At n=960 with 30 problems, between-problem variance can inflate the true CI moderately above the binomial one. Treat these as a lower bound on the true CI width."
+  },
+  "frozen_alpha5_trajectory": [
+    {
+      "step": "base",
+      "alpha": 5.0,
+      "unsteered": {
+        "point": 0.4270833333333333,
+        "ci_lo": 0.3958333333333333,
+        "ci_hi": 0.4583333333333333,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 410
+      },
+      "steered": {
+        "point": 0.41354166666666664,
+        "ci_lo": 0.38229166666666664,
+        "ci_hi": 0.44479166666666664,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 397
+      },
+      "delta": {
+        "abs_point": -0.013541666666666674,
+        "abs_ci_lo": -0.057291666666666685,
+        "abs_ci_hi": 0.030208333333333337,
+        "rel_point": -0.03170731707317075,
+        "rel_ci_lo": -0.1282736681370886,
+        "rel_ci_hi": 0.07547292649371068,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_0",
+      "alpha": 5.0,
+      "unsteered": {
+        "point": 0.459375,
+        "ci_lo": 0.428125,
+        "ci_hi": 0.490625,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 441
+      },
+      "steered": {
+        "point": 0.4197916666666667,
+        "ci_lo": 0.3885416666666667,
+        "ci_hi": 0.4510416666666667,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 403
+      },
+      "delta": {
+        "abs_point": -0.039583333333333304,
+        "abs_ci_lo": -0.08437499999999998,
+        "abs_ci_hi": 0.005208333333333315,
+        "rel_point": -0.08616780045351467,
+        "rel_ci_lo": -0.17516858298854776,
+        "rel_ci_hi": 0.011418820589072762,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_1",
+      "alpha": 5.0,
+      "unsteered": {
+        "point": 0.4427083333333333,
+        "ci_lo": 0.4114583333333333,
+        "ci_hi": 0.4739583333333333,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 425
+      },
+      "steered": {
+        "point": 0.41770833333333335,
+        "ci_lo": 0.38645833333333335,
+        "ci_hi": 0.44895833333333335,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 401
+      },
+      "delta": {
+        "abs_point": -0.024999999999999967,
+        "abs_ci_lo": -0.06875000000000003,
+        "abs_ci_hi": 0.019791666666666707,
+        "rel_point": -0.05647058823529404,
+        "rel_ci_lo": -0.1490835747625945,
+        "rel_ci_hi": 0.04798283467587271,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_2",
+      "alpha": 5.0,
+      "unsteered": {
+        "point": 0.4739583333333333,
+        "ci_lo": 0.4427083333333333,
+        "ci_hi": 0.5052083333333334,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 455
+      },
+      "steered": {
+        "point": 0.41770833333333335,
+        "ci_lo": 0.38645833333333335,
+        "ci_hi": 0.44895833333333335,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 401
+      },
+      "delta": {
+        "abs_point": -0.05624999999999997,
+        "abs_ci_lo": -0.10000000000000003,
+        "abs_ci_hi": -0.011458333333333348,
+        "rel_point": -0.11868131868131862,
+        "rel_ci_lo": -0.20293043486035123,
+        "rel_ci_hi": -0.025699436855978964,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_3",
+      "alpha": 5.0,
+      "unsteered": {
+        "point": 0.4427083333333333,
+        "ci_lo": 0.4114583333333333,
+        "ci_hi": 0.4739583333333333,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 425
+      },
+      "steered": {
+        "point": 0.40625,
+        "ci_lo": 0.375,
+        "ci_hi": 0.4375,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 390
+      },
+      "delta": {
+        "abs_point": -0.036458333333333315,
+        "abs_ci_lo": -0.08020833333333338,
+        "abs_ci_hi": 0.007291666666666696,
+        "rel_point": -0.08235294117647055,
+        "rel_ci_lo": -0.1743935776990605,
+        "rel_ci_hi": 0.017543859649122744,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_4",
+      "alpha": 5.0,
+      "unsteered": {
+        "point": 0.428125,
+        "ci_lo": 0.396875,
+        "ci_hi": 0.459375,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 411
+      },
+      "steered": {
+        "point": 0.43125,
+        "ci_lo": 0.4,
+        "ci_hi": 0.4625,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 414
+      },
+      "delta": {
+        "abs_point": 0.0031250000000000444,
+        "abs_ci_lo": -0.04166666666666663,
+        "abs_ci_hi": 0.04791666666666666,
+        "rel_point": 0.007299270072992805,
+        "rel_ci_lo": -0.0917225950782998,
+        "rel_ci_hi": 0.11764705882352938,
+        "ci_method": "binomial_approximation"
+      }
+    }
+  ],
+  "frozen_alpha_sweep_round4": [
+    {
+      "step": "round_4",
+      "alpha": 2,
+      "unsteered": {
+        "point": 0.4479166666666667,
+        "ci_lo": 0.4166666666666667,
+        "ci_hi": 0.4791666666666667,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 430
+      },
+      "steered": {
+        "point": 0.42291666666666666,
+        "ci_lo": 0.39166666666666666,
+        "ci_hi": 0.45416666666666666,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 406
+      },
+      "delta": {
+        "abs_point": -0.025000000000000022,
+        "abs_ci_lo": -0.06875000000000003,
+        "abs_ci_hi": 0.019791666666666707,
+        "rel_point": -0.05581395348837214,
+        "rel_ci_lo": -0.1472527472527472,
+        "rel_ci_hi": 0.047384507481296675,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_4",
+      "alpha": 5,
+      "unsteered": {
+        "point": 0.428125,
+        "ci_lo": 0.396875,
+        "ci_hi": 0.459375,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 411
+      },
+      "steered": {
+        "point": 0.43125,
+        "ci_lo": 0.4,
+        "ci_hi": 0.4625,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 414
+      },
+      "delta": {
+        "abs_point": 0.0031250000000000444,
+        "abs_ci_lo": -0.04166666666666663,
+        "abs_ci_hi": 0.04791666666666666,
+        "rel_point": 0.007299270072992805,
+        "rel_ci_lo": -0.0917225950782998,
+        "rel_ci_hi": 0.11764705882352938,
+        "ci_method": "binomial_approximation"
+      },
+      "source": "main_trajectory"
+    },
+    {
+      "step": "round_4",
+      "alpha": 7,
+      "unsteered": {
+        "point": 0.4375,
+        "ci_lo": 0.40625,
+        "ci_hi": 0.46875,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 420
+      },
+      "steered": {
+        "point": 0.384375,
+        "ci_lo": 0.3541666666666667,
+        "ci_hi": 0.415625,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 369
+      },
+      "delta": {
+        "abs_point": -0.05312499999999998,
+        "abs_ci_lo": -0.09791666666666665,
+        "abs_ci_hi": -0.008333333333333304,
+        "rel_point": -0.12142857142857137,
+        "rel_ci_lo": -0.21197385324567372,
+        "rel_ci_hi": -0.0196066446138357,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_4",
+      "alpha": 10,
+      "unsteered": {
+        "point": 0.4395833333333333,
+        "ci_lo": 0.4083333333333333,
+        "ci_hi": 0.4708333333333333,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 422
+      },
+      "steered": {
+        "point": 0.3645833333333333,
+        "ci_lo": 0.334375,
+        "ci_hi": 0.39479166666666665,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 350
+      },
+      "delta": {
+        "abs_point": -0.07500000000000001,
+        "abs_ci_lo": -0.11874999999999997,
+        "abs_ci_hi": -0.03122395833333371,
+        "rel_point": -0.17061611374407587,
+        "rel_ci_lo": -0.2579927087936367,
+        "rel_ci_hi": -0.07363345069148873,
+        "ci_method": "binomial_approximation"
+      }
+    }
+  ],
+  "frozen_alpha_sweep_round2": [
+    {
+      "step": "round_2",
+      "alpha": 2,
+      "unsteered": {
+        "point": 0.47708333333333336,
+        "ci_lo": 0.44583333333333336,
+        "ci_hi": 0.5083333333333333,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 458
+      },
+      "steered": {
+        "point": 0.44583333333333336,
+        "ci_lo": 0.41458333333333336,
+        "ci_hi": 0.47708333333333336,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 428
+      },
+      "delta": {
+        "abs_point": -0.03125,
+        "abs_ci_lo": -0.07500000000000001,
+        "abs_ci_hi": 0.013541666666666674,
+        "rel_point": -0.06550218340611354,
+        "rel_ci_lo": -0.15139744054086693,
+        "rel_ci_hi": 0.030023094688221726,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_2",
+      "alpha": 5,
+      "unsteered": {
+        "point": 0.46979166666666666,
+        "ci_lo": 0.43854166666666666,
+        "ci_hi": 0.5010416666666667,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 451
+      },
+      "steered": {
+        "point": 0.41041666666666665,
+        "ci_lo": 0.37916666666666665,
+        "ci_hi": 0.44166666666666665,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 394
+      },
+      "delta": {
+        "abs_point": -0.05937500000000001,
+        "abs_ci_lo": -0.10312500000000002,
+        "abs_ci_hi": -0.014583333333333337,
+        "rel_point": -0.1263858093126386,
+        "rel_ci_lo": -0.21109040695537087,
+        "rel_ci_hi": -0.033331485587583184,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_2",
+      "alpha": 7,
+      "unsteered": {
+        "point": 0.4791666666666667,
+        "ci_lo": 0.4479166666666667,
+        "ci_hi": 0.5104166666666666,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 460
+      },
+      "steered": {
+        "point": 0.39375,
+        "ci_lo": 0.36354166666666665,
+        "ci_hi": 0.425,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 378
+      },
+      "delta": {
+        "abs_point": -0.0854166666666667,
+        "abs_ci_lo": -0.13020833333333331,
+        "abs_ci_hi": -0.04062500000000002,
+        "rel_point": -0.17826086956521744,
+        "rel_ci_lo": -0.26021794188216474,
+        "rel_ci_hi": -0.08912934540524842,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_2",
+      "alpha": 10,
+      "unsteered": {
+        "point": 0.48541666666666666,
+        "ci_lo": 0.45416666666666666,
+        "ci_hi": 0.5166666666666667,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 466
+      },
+      "steered": {
+        "point": 0.36666666666666664,
+        "ci_lo": 0.33645833333333336,
+        "ci_hi": 0.396875,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 352
+      },
+      "delta": {
+        "abs_point": -0.11875000000000002,
+        "abs_ci_lo": -0.16354166666666664,
+        "abs_ci_hi": -0.07395833333333335,
+        "rel_point": -0.24463519313304727,
+        "rel_ci_lo": -0.3227864686994136,
+        "rel_ci_hi": -0.15973703805008502,
+        "ci_method": "binomial_approximation"
+      }
+    }
+  ],
+  "round_4_alpha5_rerun": {
+    "unsteered": {
+      "point": 0.46875,
+      "ci_lo": 0.4375,
+      "ci_hi": 0.5,
+      "ci_method": "binomial_approximation",
+      "n": 960,
+      "k": 450
+    },
+    "steered": {
+      "point": 0.42291666666666666,
+      "ci_lo": 0.39166666666666666,
+      "ci_hi": 0.45416666666666666,
+      "ci_method": "binomial_approximation",
+      "n": 960,
+      "k": 406
+    },
+    "delta": {
+      "abs_point": -0.04583333333333334,
+      "abs_ci_lo": -0.08958333333333335,
+      "abs_ci_hi": -0.001041666666666663,
+      "rel_point": -0.09777777777777778,
+      "rel_ci_lo": -0.18415417558886513,
+      "rel_ci_hi": -0.002380810994231415,
+      "ci_method": "binomial_approximation"
+    },
+    "original_rel_delta": {
+      "shortcut_rate_unsteered": 0.428125,
+      "shortcut_rate_steered": 0.43125,
+      "n_unsteered_shortcuts": 411,
+      "n_steered_shortcuts": 414,
+      "n_total": 960,
+      "n_problems": 30,
+      "alpha": 5.0,
+      "step": "round_4"
+    }
+  },
+  "fresh_direction_trajectory": [
+    {
+      "step": "base",
+      "alpha": 5.0,
+      "unsteered": {
+        "point": 0.4375,
+        "ci_lo": 0.40625,
+        "ci_hi": 0.46875,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 420
+      },
+      "steered": {
+        "point": 0.4239583333333333,
+        "ci_lo": 0.3927083333333333,
+        "ci_hi": 0.4552083333333333,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 407
+      },
+      "delta": {
+        "abs_point": -0.013541666666666674,
+        "abs_ci_lo": -0.05833333333333335,
+        "abs_ci_hi": 0.03125,
+        "rel_point": -0.03095238095238097,
+        "rel_ci_lo": -0.12723315746753247,
+        "rel_ci_hi": 0.07575757575757576,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_0",
+      "alpha": 5.0,
+      "unsteered": {
+        "point": 0.44479166666666664,
+        "ci_lo": 0.41354166666666664,
+        "ci_hi": 0.47604166666666664,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 427
+      },
+      "steered": {
+        "point": 0.39791666666666664,
+        "ci_lo": 0.36666666666666664,
+        "ci_hi": 0.42916666666666664,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 382
+      },
+      "delta": {
+        "abs_point": -0.046875,
+        "abs_ci_lo": -0.09062500000000001,
+        "abs_ci_hi": -0.002083333333333326,
+        "rel_point": -0.1053864168618267,
+        "rel_ci_lo": -0.1946308724832215,
+        "rel_ci_hi": -0.004926108374384219,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_2",
+      "alpha": 5.0,
+      "unsteered": {
+        "point": 0.46458333333333335,
+        "ci_lo": 0.43333333333333335,
+        "ci_hi": 0.49583333333333335,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 446
+      },
+      "steered": {
+        "point": 0.42291666666666666,
+        "ci_lo": 0.39166666666666666,
+        "ci_hi": 0.45416666666666666,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 406
+      },
+      "delta": {
+        "abs_point": -0.041666666666666685,
+        "abs_ci_lo": -0.08541666666666664,
+        "abs_ci_hi": 0.003124999999999989,
+        "rel_point": -0.08968609865470856,
+        "rel_ci_lo": -0.17582417582417578,
+        "rel_ci_hi": 0.006993825846284829,
+        "ci_method": "binomial_approximation"
+      }
+    },
+    {
+      "step": "round_4",
+      "alpha": 5.0,
+      "unsteered": {
+        "point": 0.47708333333333336,
+        "ci_lo": 0.44583333333333336,
+        "ci_hi": 0.5083333333333333,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 458
+      },
+      "steered": {
+        "point": 0.4427083333333333,
+        "ci_lo": 0.4114583333333333,
+        "ci_hi": 0.4739583333333333,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 425
+      },
+      "delta": {
+        "abs_point": -0.034375000000000044,
+        "abs_ci_lo": -0.0781510416666667,
+        "abs_ci_hi": 0.010416666666666685,
+        "rel_point": -0.07205240174672498,
+        "rel_ci_lo": -0.15789473684210525,
+        "rel_ci_hi": 0.022988505747126478,
+        "ci_method": "binomial_approximation"
+      }
+    }
+  ],
+  "fresh_vs_frozen_ab": [
+    {
+      "step": "base",
+      "frozen_delta_abs": -0.013541666666666674,
+      "fresh_delta_abs": -0.013541666666666674,
+      "fresh_minus_frozen_abs_ci": {
+        "point": 0.0005603125000000002,
+        "ci_lo": -0.06250000000000006,
+        "ci_hi": 0.06354166666666666,
+        "p_fresh_more_negative": 0.49670000000000003
+      },
+      "permutation_steered_rates": {
+        "obs_diff": -0.010416666666666685,
+        "p_two_sided": 0.6777,
+        "null_std": 0.02256448309902183,
+        "n_perm": 10000
+      }
+    },
+    {
+      "step": "round_0",
+      "frozen_delta_abs": -0.039583333333333304,
+      "fresh_delta_abs": -0.046875,
+      "fresh_minus_frozen_abs_ci": {
+        "point": -0.007185000000000001,
+        "ci_lo": -0.06874999999999998,
+        "ci_hi": 0.05520833333333336,
+        "p_fresh_more_negative": 0.5965
+      },
+      "permutation_steered_rates": {
+        "obs_diff": 0.021875000000000033,
+        "p_two_sided": 0.3517,
+        "null_std": 0.022486875415944792,
+        "n_perm": 10000
+      }
+    },
+    {
+      "step": "round_2",
+      "frozen_delta_abs": -0.05624999999999997,
+      "fresh_delta_abs": -0.041666666666666685,
+      "fresh_minus_frozen_abs_ci": {
+        "point": 0.0144596875,
+        "ci_lo": -0.04791666666666666,
+        "ci_hi": 0.07708333333333334,
+        "p_fresh_more_negative": 0.32699999999999996
+      },
+      "permutation_steered_rates": {
+        "obs_diff": -0.005208333333333315,
+        "p_two_sided": 0.8532,
+        "null_std": 0.02261088549818765,
+        "n_perm": 10000
+      }
+    },
+    {
+      "step": "round_4",
+      "frozen_delta_abs": 0.0031250000000000444,
+      "fresh_delta_abs": -0.034375000000000044,
+      "fresh_minus_frozen_abs_ci": {
+        "point": -0.037123333333333335,
+        "ci_lo": -0.10000000000000003,
+        "ci_hi": 0.02604166666666663,
+        "p_fresh_more_negative": 0.8778
+      },
+      "permutation_steered_rates": {
+        "obs_diff": -0.011458333333333293,
+        "p_two_sided": 0.6441,
+        "null_std": 0.02273605089661052,
+        "n_perm": 10000
+      }
+    }
+  ],
+  "u_shape_test": {
+    "round_2_effect": -0.05624999999999997,
+    "mean_other_effects": -0.022291666666666644,
+    "observed_gap_r2_minus_mean_other": -0.033958333333333326,
+    "p_one_sided_lower": 0.163,
+    "note": "obs_gap is negative (round_2 has stronger reduction). p_one_sided_lower asks: under a binomial-noise null with uniform random placement of the 'peak', what fraction of resamples show a gap at least this extreme?"
+  },
+  "round_2_alpha5_reproducibility": {
+    "main_trajectory_abs_delta": -0.05624999999999997,
+    "sweep_abs_delta": -0.05937500000000001,
+    "difference_abs": 0.0031250000000000444,
+    "interpretation": "Two independent n=960 measurements of round_2 \u03b1=5 agree within ~1pp. Positive reproducibility data point when the effect is well inside the CI envelope, in contrast to round_4 \u03b1=5 where the effect sat near the CI edge and the two runs disagreed by ~5pp."
+  },
+  "round_4_alpha5_pooled": {
+    "n": 1920,
+    "unsteered": {
+      "point": 0.4484375,
+      "ci_lo": 0.4265625,
+      "ci_hi": 0.4703125,
+      "ci_method": "binomial_approximation",
+      "n": 1920,
+      "k": 861
+    },
+    "steered": {
+      "point": 0.4270833333333333,
+      "ci_lo": 0.40520833333333334,
+      "ci_hi": 0.44947916666666665,
+      "ci_method": "binomial_approximation",
+      "n": 1920,
+      "k": 820
+    },
+    "delta": {
+      "abs_point": -0.021354166666666674,
+      "abs_ci_lo": -0.05312499999999998,
+      "abs_ci_hi": 0.010937499999999989,
+      "rel_point": -0.04761904761904764,
+      "rel_ci_lo": -0.11468124478732274,
+      "rel_ci_hi": 0.025486211055928555,
+      "ci_method": "binomial_approximation"
+    },
+    "interpretation": "Pooled n=1920 estimate combining the main trajectory and rerun. Sits inside the round-4 dose-response curve between \u03b1=2 (\u22125.6%) and \u03b1=7 (\u221212.1%), as expected."
+  },
+  "round_4_alpha5_reproducibility": {
+    "main_trajectory_abs_delta": 0.0031250000000000444,
+    "rerun_abs_delta": -0.04583333333333334,
+    "difference_abs": 0.04895833333333338,
+    "difference_95_ci": [
+      -0.014583333333333393,
+      0.11145833333333338
+    ],
+    "interpretation": "Two independent n=960 measurements of round_4 \u03b1=5. They disagree by ~10pp, directly illustrating why single-point n=960 measurements cannot be trusted. The rerun (\u22129.78%) is consistent with the monotonic dose-response curve at round_4; the main trajectory (+0.7%) is an outlier."
+  },
+  "round_4_alpha10_significance": {
+    "abs_delta": -0.07500000000000001,
+    "p_negative": 0.9993,
+    "interpretation": "p > 0.99 means \u03b1=10 at round_4 produces a reliably negative effect, i.e. the frozen direction retains causal leverage at the final training checkpoint."
+  },
+  "probe_trajectory": {
+    "frozen_aurocs": [
+      0.9795289119859169,
+      0.9255077135143258,
+      0.8932668584357555,
+      0.8954402279886006,
+      0.9024030664897538,
+      0.8916691947646703
+    ],
+    "fresh_aurocs": [
+      0.9795289119859169,
+      0.9734574266866349,
+      0.9242606846838652,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "random_baseline": {
+      "mean_auroc": 0.4922979376064006,
+      "std_auroc": 0.03727028068966669,
+      "min_auroc": 0.3900733143239639,
+      "max_auroc": 0.5698119969852053
+    },
+    "note": "AUROCs are single point estimates from one train/test split per checkpoint. No bootstrap CI. Random baseline bounds the null: mean 0.49, std 0.04, so a frozen AUROC of 0.89 is \u224810 SD above chance."
+  },
+  "cosine_trajectory": {
+    "target_layer": 11,
+    "frozen_norm": 1.5063095652204697,
+    "cosines": {
+      "step_0": 0.9999999999999998,
+      "step_1": 0.777771376480268,
+      "step_2": 0.7182772117079982,
+      "step_3": 0.367476892030465,
+      "step_4": 0.37973584826710827,
+      "step_5": 0.3989604672521907
+    },
+    "norms": {
+      "step_0": 1.5063095652204372,
+      "step_1": 1.4491915567367635,
+      "step_2": 0.46285417022827147,
+      "step_3": 32.38105000171616,
+      "step_4": 31.611874006817327,
+      "step_5": 28.891039841482943
+    },
+    "fresh_in_sample_aurocs": {
+      "step_0": 0.9795289119859169,
+      "step_1": 0.9734574266866349,
+      "step_2": 0.9242606846838652,
+      "step_3": 1.0,
+      "step_4": 1.0,
+      "step_5": 0.9999999999999999
+    }
+  },
+  "strategy_trajectory": [
+    {
+      "step": "step_0_base",
+      "iterative_fraction": {
+        "point": 0.6878504672897197,
+        "ci_lo": 0.6485981308411215,
+        "ci_hi": 0.7271028037383177,
+        "ci_method": "binomial_approximation",
+        "n": 535,
+        "k": 368
+      },
+      "n_total_shortcuts": 535
+    },
+    {
+      "step": "step_1_round_0",
+      "iterative_fraction": {
+        "point": 0.6602787456445993,
+        "ci_lo": 0.6202090592334495,
+        "ci_hi": 0.6986062717770035,
+        "ci_method": "binomial_approximation",
+        "n": 574,
+        "k": 379
+      },
+      "n_total_shortcuts": 574
+    },
+    {
+      "step": "step_2_round_1",
+      "iterative_fraction": {
+        "point": 0.6994633273703041,
+        "ci_lo": 0.6601073345259392,
+        "ci_hi": 0.7370304114490162,
+        "ci_method": "binomial_approximation",
+        "n": 559,
+        "k": 391
+      },
+      "n_total_shortcuts": 559
+    },
+    {
+      "step": "step_3_round_2",
+      "iterative_fraction": {
+        "point": 0.6757215619694398,
+        "ci_lo": 0.6366723259762309,
+        "ci_hi": 0.7130730050933786,
+        "ci_method": "binomial_approximation",
+        "n": 589,
+        "k": 398
+      },
+      "n_total_shortcuts": 589
+    },
+    {
+      "step": "step_4_round_3",
+      "iterative_fraction": {
+        "point": 0.6717948717948717,
+        "ci_lo": 0.6324786324786325,
+        "ci_hi": 0.7094017094017094,
+        "ci_method": "binomial_approximation",
+        "n": 585,
+        "k": 393
+      },
+      "n_total_shortcuts": 585
+    },
+    {
+      "step": "step_5_round_4",
+      "iterative_fraction": {
+        "point": 0.7042735042735043,
+        "ci_lo": 0.6666666666666666,
+        "ci_hi": 0.7418803418803419,
+        "ci_method": "binomial_approximation",
+        "n": 585,
+        "k": 412
+      },
+      "n_total_shortcuts": 585
+    }
+  ],
+  "strategy_stability_test": {
+    "base_iterative_frac": 0.6878504672897197,
+    "round_4_iterative_frac": 0.7042735042735043,
+    "delta": 0.016423036983784667,
+    "p_two_sided": 0.566,
+    "interpretation": "p > 0.05 means iterative fraction at round_4 is not distinguishable from iterative fraction at base \u2014 strategy drift is ruled out, direction drift is the remaining explanation for the frozen AUROC decline."
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "step": 5,
+  "target_layer": 11,
+  "n_shortcut": 556,
+  "n_general": 332,
+  "n_shortcut_problems": 114,
+  "dominant_pids": [
+    "cc_817_C._Really_Big_Numbers",
+    "cc_682_A._Alyona_and_Numbers"
+  ],
+  "top_shortcut_counts": {
+    "cc_817_C._Really_Big_Numbers": 16,
+    "cc_682_A._Alyona_and_Numbers": 15,
+    "cc_798_A._Mike_and_palindrome": 13,
+    "cc_634_B._XOR_Equation": 13,
+    "cc_635_C._XOR_Equation": 12,
+    "cc_501_A._Contest": 11,
+    "cc_387_B._George_and_Round": 11,
+    "cc_1186_A._Vus_the_Cossack_and_a_Contest": 10,
+    "cc_451_A._Game_With_Sticks": 10,
+    "cc_979_B._Treasure_Hunt": 10
+  },
+  "baseline_insample_auroc": 1.0,
+  "check1_drop_dominant": {
+    "auroc": 1.0,
+    "n_shortcut": 525,
+    "n_general": 331,
+    "n_shortcut_problems": 112
+  },
+  "check2_loo": {
+    "per_problem": {
+      "cc_817_C._Really_Big_Numbers": {
+        "auroc": 1.0,
+        "n_held_shortcut": 16
+      },
+      "cc_682_A._Alyona_and_Numbers": {
+        "auroc": 1.0,
+        "n_held_shortcut": 15
+      },
+      "cc_634_B._XOR_Equation": {
+        "auroc": 1.0,
+        "n_held_shortcut": 13
+      },
+      "cc_798_A._Mike_and_palindrome": {
+        "auroc": 1.0,
+        "n_held_shortcut": 13
+      },
+      "cc_635_C._XOR_Equation": {
+        "auroc": 0.9999999999999999,
+        "n_held_shortcut": 12
+      },
+      "cc_387_B._George_and_Round": {
+        "auroc": 1.0,
+        "n_held_shortcut": 11
+      },
+      "cc_501_A._Contest": {
+        "auroc": 1.0,
+        "n_held_shortcut": 11
+      },
+      "cc_1186_A._Vus_the_Cossack_and_a_Contest": {
+        "auroc": 1.0,
+        "n_held_shortcut": 10
+      },
+      "cc_451_A._Game_With_Sticks": {
+        "auroc": 1.0,
+        "n_held_shortcut": 10
+      },
+      "cc_897_C._Nephren_gives_a_riddle": {
+        "auroc": 1.0,
+        "n_held_shortcut": 10
+      },
+      "cc_926_G._Large_Bouquets": {
+        "auroc": 0.9999999999999999,
+        "n_held_shortcut": 10
+      },
+      "cc_979_B._Treasure_Hunt": {
+        "auroc": 1.0,
+        "n_held_shortcut": 10
+      },
+      "cc_1029_B._Creating_the_Contest": {
+        "auroc": 0.9725568942436412,
+        "n_held_shortcut": 9
+      },
+      "cc_1075_A._The_King's_Race": {
+        "auroc": 1.0,
+        "n_held_shortcut": 9
+      },
+      "cc_1085_B._Div_Times_Mod": {
+        "auroc": 1.0,
+        "n_held_shortcut": 9
+      },
+      "cc_373_B._Making_Sequences_is_Fun": {
+        "auroc": 1.0,
+        "n_held_shortcut": 9
+      },
+      "cc_375_B._Maximum_Submatrix_2": {
+        "auroc": 1.0,
+        "n_held_shortcut": 9
+      },
+      "cc_771_A._Bear_and_Friendship_Condition": {
+        "auroc": 1.0,
+        "n_held_shortcut": 9
+      },
+      "cc_774_D._Lie_or_Truth": {
+        "auroc": 0.9976572958500669,
+        "n_held_shortcut": 9
+      },
+      "cc_86_A._Reflection": {
+        "auroc": 1.0,
+        "n_held_shortcut": 9
+      },
+      "cc_992_B._Nastya_Studies_Informatics": {
+        "auroc": 0.6452476572958501,
+        "n_held_shortcut": 9
+      },
+      "cc_11_B._Jumping_Jack": {
+        "auroc": 0.32793674698795183,
+        "n_held_shortcut": 8
+      },
+      "cc_535_A._Tavas_and_Nafas": {
+        "auroc": 0.9845632530120483,
+        "n_held_shortcut": 8
+      },
+      "cc_627_A._XOR_Equation": {
+        "auroc": 1.0,
+        "n_held_shortcut": 8
+      },
+      "cc_675_A._Infinite_Sequence": {
+        "auroc": 0.9932228915662651,
+        "n_held_shortcut": 8
+      },
+      "cc_870_C._Maximum_splitting": {
+        "auroc": 1.0,
+        "n_held_shortcut": 8
+      },
+      "cc_1016_B._Segment_Occurrences": {
+        "auroc": 0.9883820998278829,
+        "n_held_shortcut": 7
+      },
+      "cc_1195_D1._Submarine_in_the_Rybinsk_Sea_(easy_edition)": {
+        "auroc": 0.9995697074010328,
+        "n_held_shortcut": 7
+      },
+      "cc_1446_B._Catching_Cheaters": {
+        "auroc": 1.0,
+        "n_held_shortcut": 7
+      },
+      "cc_233_B._Non-square_Equation": {
+        "auroc": 1.0,
+        "n_held_shortcut": 7
+      },
+      "cc_276_A._Lunch_Rush": {
+        "auroc": 0.7758175559380379,
+        "n_held_shortcut": 7
+      },
+      "cc_290_A._Mysterious_strings": {
+        "auroc": 1.0,
+        "n_held_shortcut": 7
+      },
+      "cc_493_B._Vasya_and_Wrestling": {
+        "auroc": 0.9931153184165232,
+        "n_held_shortcut": 7
+      },
+      "cc_672_B._Different_is_Good": {
+        "auroc": 0.7306368330464715,
+        "n_held_shortcut": 7
+      },
+      "cc_940_B._Our_Tanya_is_Crying_Out_Loud": {
+        "auroc": 0.8962994836488812,
+        "n_held_shortcut": 7
+      },
+      "cc_1005_E1._Median_on_Segments_(Permutations_Edition)": {
+        "auroc": 1.0,
+        "n_held_shortcut": 6
+      },
+      "cc_1133_C._Balanced_Team": {
+        "auroc": 1.0,
+        "n_held_shortcut": 6
+      },
+      "cc_178_F1._Representative_Sampling": {
+        "auroc": 0.9959839357429717,
+        "n_held_shortcut": 6
+      },
+      "cc_180_C._Letter": {
+        "auroc": 1.0,
+        "n_held_shortcut": 6
+      },
+      "cc_334_B._Eight_Point_Sets": {
+        "auroc": 1.0,
+        "n_held_shortcut": 6
+      },
+      "cc_376_D._Maximum_Submatrix_2": {
+        "auroc": 1.0,
+        "n_held_shortcut": 6
+      },
+      "cc_577_A._Multiplication_Table": {
+        "auroc": 1.0,
+        "n_held_shortcut": 6
+      },
+      "cc_719_A._Vitya_in_the_Countryside": {
+        "auroc": 0.9984939759036144,
+        "n_held_shortcut": 6
+      },
+      "cc_831_A._Unimodal_Array": {
+        "auroc": 0.9939759036144579,
+        "n_held_shortcut": 6
+      },
+      "cc_871_A._Maximum_splitting": {
+        "auroc": 1.0,
+        "n_held_shortcut": 6
+      },
+      "cc_962_B._Students_in_Railway_Carriage": {
+        "auroc": 1.0,
+        "n_held_shortcut": 6
+      },
+      "cc_980_A._Links_and_Pearls": {
+        "auroc": 0.9984939759036143,
+        "n_held_shortcut": 6
+      },
+      "cc_1459_B._Move_and_Turn": {
+        "auroc": 0.9259036144578313,
+        "n_held_shortcut": 5
+      },
+      "cc_448_D._Multiplication_Table": {
+        "auroc": 0.9879518072289157,
+        "n_held_shortcut": 5
+      },
+      "cc_538_A._Cutting_Banner": {
+        "auroc": 0.9981927710843373,
+        "n_held_shortcut": 5
+      },
+      "cc_104_A._Blackjack": {
+        "auroc": 0.9081325301204819,
+        "n_held_shortcut": 4
+      },
+      "cc_1059_C._Sequence_Transformation": {
+        "auroc": 1.0,
+        "n_held_shortcut": 4
+      },
+      "cc_1395_C._Boboniu_and_Bit_Operations": {
+        "auroc": 1.0,
+        "n_held_shortcut": 4
+      },
+      "cc_369_A._Valera_and_Plates": {
+        "auroc": 1.0,
+        "n_held_shortcut": 4
+      },
+      "cc_39_D._Cubical_Planet": {
+        "auroc": 0.5993975903614458,
+        "n_held_shortcut": 4
+      },
+      "cc_445_B._DZY_Loves_Chemistry": {
+        "auroc": 1.0,
+        "n_held_shortcut": 4
+      },
+      "cc_454_B._Little_Pony_and_Sort_by_Shift": {
+        "auroc": 0.6024096385542169,
+        "n_held_shortcut": 4
+      },
+      "cc_572_A._Arrays": {
+        "auroc": 0.9992469879518072,
+        "n_held_shortcut": 4
+      },
+      "cc_57_B._Martian_Architecture": {
+        "auroc": 0.9977409638554217,
+        "n_held_shortcut": 4
+      },
+      "cc_604_B._More_Cowbell": {
+        "auroc": 1.0,
+        "n_held_shortcut": 4
+      }
+    },
+    "min": 0.32793674698795183,
+    "max": 1.0,
+    "mean": 0.9551821572002294,
+    "median": 1.0,
+    "std": 0.1241299531758234,
+    "n_folds": 60
+  }
+}

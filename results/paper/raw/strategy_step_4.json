@@ -1,0 +1,13 @@
+{
+  "step": 4,
+  "step_label": "step_4_round_3",
+  "shortcut_iterative": 393,
+  "shortcut_closed_form": 4,
+  "shortcut_other": 188,
+  "general_iterative": 207,
+  "general_closed_form": 2,
+  "general_other": 148,
+  "frac_iter_shortcuts": 0.6717948717948717,
+  "frac_closed_shortcuts": 0.006837606837606838,
+  "frac_other_shortcuts": 0.3213675213675214
+}
