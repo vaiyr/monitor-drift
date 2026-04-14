@@ -31,10 +31,15 @@ from typing import Any
 
 import modal
 
-# 7B for everything: feasibility, training, extraction
-BASE_MODEL = "Qwen/Qwen2.5-Coder-7B-Instruct"
+# 7B for everything: feasibility, training, extraction.
+# Override via MONITOR_DRIFT_BASE_MODEL for replication on a different model.
+BASE_MODEL = os.environ.get(
+    "MONITOR_DRIFT_BASE_MODEL", "Qwen/Qwen2.5-Coder-7B-Instruct"
+)
 TRAINING_MODEL = BASE_MODEL
 MODEL_CACHE = "/model-cache"
+# DeepSeek-Coder-7B-instruct-v1.5 caps at 4096; Qwen-Coder-7B supports 8192.
+MAX_MODEL_LEN = int(os.environ.get("MONITOR_DRIFT_MAX_LEN", "8192"))
 
 
 def _download_models():
@@ -57,6 +62,7 @@ inference_image = (
         "huggingface_hub>=0.28.0",
         "scikit-learn>=1.5.0",
     )
+    .env({"MONITOR_DRIFT_BASE_MODEL": BASE_MODEL, "MONITOR_DRIFT_MAX_LEN": str(MAX_MODEL_LEN)})
     .run_function(_download_models, secrets=[modal.Secret.from_name("huggingface-token")])
     .add_local_python_source("src", "scripts")
 )
@@ -77,12 +83,15 @@ training_image = (
         "huggingface_hub>=0.28.0",
         "vllm>=0.6.0",
     )
+    .env({"MONITOR_DRIFT_BASE_MODEL": BASE_MODEL, "MONITOR_DRIFT_MAX_LEN": str(MAX_MODEL_LEN)})
     .run_function(_download_models, secrets=[modal.Secret.from_name("huggingface-token")])
     .add_local_python_source("src")
 )
 
-app = modal.App("control-rl-dynamics")
-volume = modal.Volume.from_name("control-results", create_if_missing=True)
+_VOLUME_NAME = os.environ.get("MONITOR_DRIFT_VOLUME", "control-results")
+_APP_NAME = os.environ.get("MONITOR_DRIFT_APP", "control-rl-dynamics")
+app = modal.App(_APP_NAME)
+volume = modal.Volume.from_name(_VOLUME_NAME, create_if_missing=True)
 hf_secret = modal.Secret.from_name("huggingface-token")
 
 VOLUME_PATH = "/results"
@@ -261,7 +270,7 @@ def run_feasibility(
         model=BASE_MODEL,
         tensor_parallel_size=2,
         dtype="bfloat16",
-        max_model_len=8192,
+        max_model_len=MAX_MODEL_LEN,
         trust_remote_code=True,
         download_dir=MODEL_CACHE,
     )
@@ -533,7 +542,7 @@ def extract_checkpoint_activations(
         from vllm.lora.request import LoRARequest
         llm = LLM(
             model=gen_model, tensor_parallel_size=1, dtype="bfloat16",
-            max_model_len=8192, trust_remote_code=True, download_dir=MODEL_CACHE,
+            max_model_len=MAX_MODEL_LEN, trust_remote_code=True, download_dir=MODEL_CACHE,
             enable_lora=True, max_lora_rank=64,
             gpu_memory_utilization=0.85, max_num_seqs=128,
         )
@@ -541,7 +550,7 @@ def extract_checkpoint_activations(
     else:
         llm = LLM(
             model=gen_model, tensor_parallel_size=1, dtype="bfloat16",
-            max_model_len=8192, trust_remote_code=True, download_dir=MODEL_CACHE,
+            max_model_len=MAX_MODEL_LEN, trust_remote_code=True, download_dir=MODEL_CACHE,
             gpu_memory_utilization=0.85, max_num_seqs=128,
         )
         lora_req = None
@@ -1427,7 +1436,7 @@ def classify_strategies_cc(checkpoint_step: int):
         from vllm.lora.request import LoRARequest
         llm = LLM(
             model=TRAINING_MODEL, tensor_parallel_size=1, dtype="bfloat16",
-            max_model_len=8192, trust_remote_code=True, download_dir=MODEL_CACHE,
+            max_model_len=MAX_MODEL_LEN, trust_remote_code=True, download_dir=MODEL_CACHE,
             enable_lora=True, max_lora_rank=64,
             gpu_memory_utilization=0.85, max_num_seqs=128,
         )
@@ -1435,7 +1444,7 @@ def classify_strategies_cc(checkpoint_step: int):
     else:
         llm = LLM(
             model=BASE_MODEL, tensor_parallel_size=1, dtype="bfloat16",
-            max_model_len=8192, trust_remote_code=True, download_dir=MODEL_CACHE,
+            max_model_len=MAX_MODEL_LEN, trust_remote_code=True, download_dir=MODEL_CACHE,
             gpu_memory_utilization=0.85, max_num_seqs=128,
         )
         lora_req = None
@@ -1758,7 +1767,9 @@ def main(
       classify-strategies-cc      — classify solution strategies
       validate-fresh-probe-cc     — validate fresh probe at step
       fresh-directions-cc         — compute fresh probe cosine similarity
-      ablate-cc-r4-multi          — directional ablation
+      ablate-cc-r0-multi          — directional ablation at round_0 (frozen)
+      ablate-cc-r2-multi          — directional ablation at round_2 (frozen)
+      ablate-cc-r4-multi          — directional ablation at round_4
       ablate-cc-r4-noscaler       — ablation without scaler
       random-control-cc-r4        — random-direction control
       pipeline-cc                 — full CC pipeline
@@ -1973,6 +1984,47 @@ def main(
                     "dom_r4",
                 ],
                 output_subdir="ablation_cc_r4",
+            ),
+            indent=2,
+        ))
+
+    elif mode == "ablate-cc-r0-multi":
+        # Frozen-direction ablation at round_0. Fills the gap at rounds 0-3
+        # in the necessity-test trajectory (round_4 is the existing run).
+        print(json.dumps(
+            run_ablation_multi.remote(
+                single_checkpoint="round_0",
+                n_samples=32,
+                micro_batch_size=32,
+                max_problems=30,
+                directions_npz_path="/wi2_directions.npz",
+                direction_keys=[
+                    "writeup_frozen",
+                    "det_lr_step_0",
+                    "dom_step_0",
+                ],
+                output_subdir="ablation_cc_r0",
+            ),
+            indent=2,
+        ))
+
+    elif mode == "ablate-cc-r2-multi":
+        # Frozen-direction ablation at round_2. Companion to ablate-cc-r0-multi;
+        # together with ablate-cc-r4-multi these localize the necessity-loss
+        # transition across training.
+        print(json.dumps(
+            run_ablation_multi.remote(
+                single_checkpoint="round_2",
+                n_samples=32,
+                micro_batch_size=32,
+                max_problems=30,
+                directions_npz_path="/wi2_directions.npz",
+                direction_keys=[
+                    "writeup_frozen",
+                    "det_lr_step_0",
+                    "dom_step_0",
+                ],
+                output_subdir="ablation_cc_r2",
             ),
             indent=2,
         ))

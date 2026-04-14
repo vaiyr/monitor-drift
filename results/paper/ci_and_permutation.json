@@ -579,10 +579,10 @@
       "frozen_delta_abs": -0.013541666666666674,
       "fresh_delta_abs": -0.013541666666666674,
       "fresh_minus_frozen_abs_ci": {
-        "point": 0.0005603125000000002,
-        "ci_lo": -0.06250000000000006,
-        "ci_hi": 0.06354166666666666,
-        "p_fresh_more_negative": 0.49670000000000003
+        "point": 0.00021749999999999997,
+        "ci_lo": -0.06145833333333334,
+        "ci_hi": 0.06145833333333334,
+        "p_fresh_more_negative": 0.5038
       },
       "permutation_steered_rates": {
         "obs_diff": -0.010416666666666685,
@@ -596,10 +596,10 @@
       "frozen_delta_abs": -0.039583333333333304,
       "fresh_delta_abs": -0.046875,
       "fresh_minus_frozen_abs_ci": {
-        "point": -0.007185000000000001,
-        "ci_lo": -0.06874999999999998,
-        "ci_hi": 0.05520833333333336,
-        "p_fresh_more_negative": 0.5965
+        "point": -0.0072299999999999994,
+        "ci_lo": -0.0708333333333333,
+        "ci_hi": 0.05416666666666664,
+        "p_fresh_more_negative": 0.5902000000000001
       },
       "permutation_steered_rates": {
         "obs_diff": 0.021875000000000033,
@@ -613,10 +613,10 @@
       "frozen_delta_abs": -0.05624999999999997,
       "fresh_delta_abs": -0.041666666666666685,
       "fresh_minus_frozen_abs_ci": {
-        "point": 0.0144596875,
+        "point": 0.014778229166666665,
         "ci_lo": -0.04791666666666666,
-        "ci_hi": 0.07708333333333334,
-        "p_fresh_more_negative": 0.32699999999999996
+        "ci_hi": 0.07708333333333328,
+        "p_fresh_more_negative": 0.3285
       },
       "permutation_steered_rates": {
         "obs_diff": -0.005208333333333315,
@@ -630,10 +630,10 @@
       "frozen_delta_abs": 0.0031250000000000444,
       "fresh_delta_abs": -0.034375000000000044,
       "fresh_minus_frozen_abs_ci": {
-        "point": -0.037123333333333335,
-        "ci_lo": -0.10000000000000003,
-        "ci_hi": 0.02604166666666663,
-        "p_fresh_more_negative": 0.8778
+        "point": -0.036869270833333335,
+        "ci_lo": -0.09895833333333331,
+        "ci_hi": 0.024999999999999967,
+        "p_fresh_more_negative": 0.8802
       },
       "permutation_steered_rates": {
         "obs_diff": -0.011458333333333293,
@@ -833,5 +833,97 @@
     "delta": 0.016423036983784667,
     "p_two_sided": 0.566,
     "interpretation": "p > 0.05 means iterative fraction at round_4 is not distinguishable from iterative fraction at base \u2014 strategy drift is ruled out, direction drift is the remaining explanation for the frozen AUROC decline."
-  }
+  },
+  "ablation_trajectory_frozen": [
+    {
+      "checkpoint": "round_0",
+      "direction_key": "writeup_frozen",
+      "unsteered": {
+        "point": 0.45,
+        "ci_lo": 0.41875,
+        "ci_hi": 0.48125,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 432
+      },
+      "ablated": {
+        "point": 0.44895833333333335,
+        "ci_lo": 0.41770833333333335,
+        "ci_hi": 0.48020833333333335,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 431
+      },
+      "delta": {
+        "abs_point": -0.001041666666666663,
+        "abs_ci_lo": -0.044791666666666674,
+        "abs_ci_hi": 0.0437760416666663,
+        "rel_point": -0.0023148148148148064,
+        "rel_ci_lo": -0.09523809523809515,
+        "rel_ci_hi": 0.10304449648711946,
+        "ci_method": "binomial_approximation"
+      },
+      "n": 960
+    },
+    {
+      "checkpoint": "round_2",
+      "direction_key": "writeup_frozen",
+      "unsteered": {
+        "point": 0.46458333333333335,
+        "ci_lo": 0.43333333333333335,
+        "ci_hi": 0.49583333333333335,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 446
+      },
+      "ablated": {
+        "point": 0.46875,
+        "ci_lo": 0.4375,
+        "ci_hi": 0.5,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 450
+      },
+      "delta": {
+        "abs_point": 0.004166666666666652,
+        "abs_ci_lo": -0.04062500000000002,
+        "abs_ci_hi": 0.04999999999999999,
+        "rel_point": 0.00896860986547082,
+        "rel_ci_lo": -0.08369548663990035,
+        "rel_ci_hi": 0.11274999999999992,
+        "ci_method": "binomial_approximation"
+      },
+      "n": 960
+    },
+    {
+      "checkpoint": "round_4",
+      "direction_key": "writeup_frozen",
+      "unsteered": {
+        "point": 0.4510416666666667,
+        "ci_lo": 0.4197916666666667,
+        "ci_hi": 0.4822916666666667,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 433
+      },
+      "ablated": {
+        "point": 0.446875,
+        "ci_lo": 0.415625,
+        "ci_hi": 0.478125,
+        "ci_method": "binomial_approximation",
+        "n": 960,
+        "k": 429
+      },
+      "delta": {
+        "abs_point": -0.004166666666666652,
+        "abs_ci_lo": -0.04791666666666666,
+        "abs_ci_hi": 0.04062500000000002,
+        "rel_point": -0.00923787528868357,
+        "rel_ci_lo": -0.10067114093959731,
+        "rel_ci_hi": 0.09512195121951225,
+        "ci_method": "binomial_approximation"
+      },
+      "n": 960
+    }
+  ]
 }

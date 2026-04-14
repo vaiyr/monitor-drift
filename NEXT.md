@@ -137,13 +137,15 @@ Expected results from existing data:
 | Checkpoint | detection_confidence | intervention_confidence | causal_necessity | Expected alerts |
 |---|---|---|---|---|
 | base | 0.98 (high) | N/A (no steering baseline) | N/A | None |
-| round_0 | ~0.89 (degraded) | strong (alpha=10 effective) | unknown (not yet tested) | DRIFT |
+| round_0 | ~0.89 (degraded) | strong (alpha=10 effective) | FAILS (Δ = -0.23%, CI [-9.5%, +10.1%]) | DRIFT + NECESSITY_LOST |
 | round_1 | ~0.89 | strong | unknown | DRIFT |
-| round_2 | ~0.89 | -24.5% at alpha=10 | needs testing | DRIFT, possibly healthy causal |
-| round_3 | ~0.89 | declining | needs testing | DRIFT |
-| round_4 | ~0.89 | -17.1% at alpha=10 | FAILS (delta = -0.9%) | DRIFT + NECESSITY_LOST |
+| round_2 | ~0.89 | -24.5% at alpha=10 | FAILS (Δ = +0.90%, CI [-8.3%, +11.3%]) | DRIFT + NECESSITY_LOST |
+| round_3 | ~0.89 | declining | unknown | DRIFT |
+| round_4 | ~0.89 | -17.1% at alpha=10 | FAILS (Δ = -0.92%, CI [-10.4%, +9.6%]) | DRIFT + NECESSITY_LOST |
 
 The key comparison: a naive frozen monitor at round 4 reports "AUROC 0.89 (slightly degraded), steering effect -17.1% (working)." This monitor reports "AUROC 0.89 (DRIFT), steering effect -17.1% (working), ablation effect -0.9% (NECESSITY_LOST)." The third signal is what catches the failure.
+
+**Update (post-measurement, rounds 0 and 2):** NECESSITY_LOST is present at round 0 — the CV-LR frozen direction is *never* causally load-bearing after the first SFT round. This matches the harsher outcome anticipated in §6.2: "the frozen direction was magnitude-only from the start." The deterministic-LR alternative is similarly null at every checkpoint; DoM is the only method that shows a CI-excluding-zero ablation effect anywhere (−10.5% [−18.9%, −1.4%] at round 2). See `results/paper/raw/ablation_cc_r{0,2,4}.json`.
 
 ### 4.2 Fresh-direction causal check
 

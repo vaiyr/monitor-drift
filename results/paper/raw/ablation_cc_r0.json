@@ -1,0 +1,39 @@
+{
+  "checkpoint": "round_0",
+  "probe_layer": 11,
+  "per_direction": {
+    "writeup_frozen": {
+      "shortcut_rate_unsteered": 0.45,
+      "shortcut_rate_ablated": 0.44895833333333335,
+      "n_unsteered_shortcuts": 432,
+      "n_ablated_shortcuts": 431,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 1.5063095092773438,
+      "checkpoint": "round_0",
+      "direction_key": "writeup_frozen"
+    },
+    "det_lr_step_0": {
+      "shortcut_rate_unsteered": 0.4583333333333333,
+      "shortcut_rate_ablated": 0.440625,
+      "n_unsteered_shortcuts": 440,
+      "n_ablated_shortcuts": 423,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 16.193384170532227,
+      "checkpoint": "round_0",
+      "direction_key": "det_lr_step_0"
+    },
+    "dom_step_0": {
+      "shortcut_rate_unsteered": 0.43020833333333336,
+      "shortcut_rate_ablated": 0.42604166666666665,
+      "n_unsteered_shortcuts": 413,
+      "n_ablated_shortcuts": 409,
+      "n_total": 960,
+      "n_problems": 30,
+      "direction_norm": 3.884840965270996,
+      "checkpoint": "round_0",
+      "direction_key": "dom_step_0"
+    }
+  }
+}

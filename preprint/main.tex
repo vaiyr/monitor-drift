@@ -113,12 +113,16 @@ round~4 produces monotonic dose-response reductions in shortcut rate.
 Round~4, $\alpha{=}10$: $-17.1\%$, 95\% CI $[-25.8, -7.4]$. Read alone,
 this is a clean ``steering still works'' result.
 \item \textbf{Directional ablation dissociates from additive steering
-(\S\ref{sec:ablation}).} Projecting the same frozen CV-LR direction out
-at round~4 produces $-0.9\%$ ($p{=}0.57$). The deterministic-LR frozen
-direction also nulls ($+2.4\%$). Only difference-of-means retains
-measurable necessity ($-7.2\%$ frozen; $-36.5\%$ fresh, the largest
-effect in the experiment). \textbf{Additive steering alone does not
-license necessity claims.}
+(\S\ref{sec:ablation}).} Projecting the frozen CV-LR direction out
+produces a null effect at every checkpoint tested---round~0 ($\Delta{=}-0.23\%$),
+round~2 ($+0.90\%$), and round~4 ($-0.92\%$)---while additive steering on
+the same direction remains significant. The deterministic-LR frozen
+direction is similarly null throughout. Only difference-of-means retains
+measurable necessity, and only transiently ($-10.5\%$ at round~2,
+$-7.2\%$ at round~4; fresh DoM at round~4 gives $-36.5\%$, the largest
+single-condition effect in the experiment). The dissociation is present
+from the first SFT round, not a late-checkpoint transition.
+\textbf{Additive steering alone does not license necessity claims.}
 \end{enumerate}
 
 \begin{figure}[t]
@@ -606,10 +610,33 @@ descriptively. The main-text findings (rotation, dose-response,
 dissociation) rest on comparisons where CIs exclude zero or the
 effect is large enough that sample-size uncertainty is subordinate.
 
-\paragraph{Ablation measured at a single checkpoint.} We ran directional
-ablation at round~4 only. Whether the dissociation is present at
-earlier checkpoints (including round~2, which is more responsive to
-additive steering) is untested here.
+\paragraph{Ablation trajectory (rounds 0, 2, 4).} We extended the
+round~4 ablation to rounds 0 and 2 on all three frozen extractions
+(Fig.~\ref{fig:ablation-trajectory}). The additive--ablation
+dissociation is present from round~0: the CV-LR frozen direction
+produces relative $\Delta{=}-0.23\%$ [$-9.48\%, +10.05\%$] at round~0,
+$+0.90\%$ [$-8.25\%, +11.25\%$] at round~2, and $-0.92\%$ [$-10.38\%,
++9.64\%$] at round~4 (95\% CI, $n{=}960$ per condition).
+Deterministic-LR ablation is similarly null at every checkpoint. DoM
+is the only method whose ablation effect excludes zero at any
+checkpoint ($-10.53\%$ [$-18.90\%, -1.38\%$] at round~2), and even DoM
+is null at round~0. The load-bearing claim strengthens: LR-family
+frozen directions fail the necessity test from the very first SFT
+round, not at a late transition. Fresh-direction ablation across
+rounds is not yet measured.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{figures/fig5_ablation_trajectory.pdf}
+\caption{\textbf{Frozen-direction ablation across rounds 0, 2, 4.}
+CV-LR and deterministic-LR frozen directions produce null ablation
+effects at every checkpoint; only DoM excludes zero, and only at
+round~2. The dissociation between additive steering (Fig.~\ref{fig:dose})
+and projective ablation on the CV-LR frozen direction is present from
+the first SFT round, not at a late transition. $n{=}960$ per
+condition; binomial-bootstrap 95\% CIs.}
+\label{fig:ablation-trajectory}
+\end{figure}
 
 \paragraph{Linear methods only.} Non-linear probes (MLPs) and non-linear
 steering may behave differently. Our linear setup is a cleaner test

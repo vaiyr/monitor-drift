@@ -1,7 +1,11 @@
 """Frozen experiment config constants for RL feature dynamics study."""
 
-# 7B for everything: feasibility, training, extraction
-BASE_MODEL = "Qwen/Qwen2.5-Coder-7B-Instruct"
+# 7B for everything: feasibility, training, extraction.
+# Override via MONITOR_DRIFT_BASE_MODEL for replication on a different model.
+import os as _os
+BASE_MODEL = _os.environ.get(
+    "MONITOR_DRIFT_BASE_MODEL", "Qwen/Qwen2.5-Coder-7B-Instruct"
+)
 TRAINING_MODEL = BASE_MODEL
 
 # Frozen QLoRA config

@@ -587,6 +587,37 @@ def main():
                 ),
             }
 
+    # === Frozen-direction ablation trajectory (rounds 0, 2, 4) ===
+    # Projective ablation of the frozen probe direction at each checkpoint.
+    # The necessity-loss question: does removing the direction from the
+    # residual stream change shortcut rate? Healthy = large negative Δ;
+    # NECESSITY_LOST = Δ ≈ 0 while additive steering still works.
+    ablation_rows = []
+    for ck, fname in [
+        ("round_0", "ablation_cc_r0.json"),
+        ("round_2", "ablation_cc_r2.json"),
+        ("round_4", "ablation_cc_r4.json"),
+    ]:
+        ab = load_json(_read(fname))
+        if ab is None:
+            continue
+        pd = ab.get("per_direction", {}).get("writeup_frozen")
+        if pd is None:
+            continue
+        n = pd["n_total"]
+        k_u = pd["n_unsteered_shortcuts"]
+        k_a = pd["n_ablated_shortcuts"]
+        ablation_rows.append({
+            "checkpoint": ck,
+            "direction_key": "writeup_frozen",
+            "unsteered": binomial_ci(k_u, n),
+            "ablated": binomial_ci(k_a, n),
+            "delta": diff_ci(k_u, n, k_a, n),
+            "n": n,
+        })
+    if ablation_rows:
+        out["ablation_trajectory_frozen"] = ablation_rows
+
     out_path = RESULTS_DIR / "ci_and_permutation.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")

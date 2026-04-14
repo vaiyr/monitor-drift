@@ -153,6 +153,25 @@ def main() -> None:
         print("  Frozen direction retains causal leverage at the final checkpoint.")
         print()
 
+    # Frozen-direction ablation trajectory (necessity test)
+    ablation = data.get("ablation_trajectory_frozen", [])
+    if ablation:
+        print("Frozen direction ablation trajectory (projective; necessity test)")
+        print("-" * 72)
+        print(f"{'checkpoint':<12} {'unsteered':<12} {'ablated':<12} "
+              f"{'rel Δ':<10} {'rel Δ 95% CI':<24}")
+        for row in ablation:
+            u = row["unsteered"]["point"]
+            a = row["ablated"]["point"]
+            d = row["delta"]
+            print(
+                f"{row['checkpoint']:<12} {u:>7.3f}      {a:>7.3f}      "
+                f"{d['rel_point']*100:>+6.2f}%  "
+                f"{fmt_ci_pct(d['rel_ci_lo'], d['rel_ci_hi'])}"
+            )
+        print("  CI crossing zero at a late checkpoint = NECESSITY_LOST.")
+        print()
+
     # Fresh vs frozen A/B
     ab = data.get("fresh_vs_frozen_ab", [])
     if ab:
